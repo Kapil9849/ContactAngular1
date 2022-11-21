@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
-import { StudentComponent } from './Profile/Student.Component';
 import { HomeComponent } from './Home/Home.component';
 import { MessageService } from './appServices/message.service';
 import {FileUploadModule} from 'primeng/fileupload';
@@ -15,7 +14,7 @@ import { ApiService } from './shared/services/api.service';
 import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,StudentComponent, FilegridComponent, UploadFileComponent
+    AppComponent,HomeComponent, FilegridComponent, UploadFileComponent
   ],
   imports: [
     BrowserModule,TableModule,
