@@ -23,11 +23,12 @@ export class EnquiryComponent {
     this.http.get('http://20.81.111.0/api')
       .subscribe(posts => {
         console.log(posts)
+        console.log("posts are"+posts);
         this.customers = posts
       });
     this.cols = [{ field: 'id', header: 'Id' }, { field: 'name', header: 'Name' }, { field: 'email', header: 'Email' }, { field: 'phone', header: 'Phone' },{ field: 'address', header: 'Address' }];
   }
-  
+
 
 
   DownloadMsg() {
