@@ -27,6 +27,7 @@ export class EnquiryComponent {
       });
     this.cols = [{ field: 'id', header: 'Id' }, { field: 'name', header: 'Name' }, { field: 'email', header: 'Email' }, { field: 'phone', header: 'Phone' },{ field: 'address', header: 'Address' }];
   }
+  
 
 
   DownloadMsg() {
