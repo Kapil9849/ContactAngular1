@@ -20,7 +20,7 @@ export class EnquiryComponent {
 
   ngOnInit(): void {
 
-    this.http.get('http://20.81.111.0/api')
+    this.http.get('https://20.81.111.0/api')
       .subscribe(posts => {
         console.log(posts)
         console.log("posts are"+posts);
