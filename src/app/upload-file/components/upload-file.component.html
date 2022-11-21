@@ -1,0 +1,65 @@
+
+<div class="frame col-sm-6">
+	<div class="center">
+		<div class="title">
+			<h1>Drop file to upload</h1>
+		</div>
+            <form method="post" enctype="multipart/form-data">
+                <div style="margin: top 100px;">
+                    <input type="file" (change)="onChangeExcelFile($event)" accept=".xlsx" class="file-input"   id="file" name="file" multiple />
+                </div>
+              </form>
+        <button style="margin-right:0px;" class="btn" (click)="GetTableData()" >Submit</button>
+	</div>
+</div>
+
+
+<div class="col-sm-6" style="margin-top: 240px;margin-left: 150px;" >
+  <p [hidden]="MsgFormat"style="color: red;">File Format : {{ FileFormat }}</p>
+  <p [hidden]="MsgSize"style="color: red;">File size   : {{ Filesize }}</p>
+</div>
+
+
+
+<!-- <table class="table row-border hover">
+  <thead>
+  <tr style="background-color: rgb(68, 199, 171);">
+    <th style="width:25%">ID</th>
+    <th style="width:25%">Title</th>
+    <th style="width:25%">Download</th>
+    <th style="width:25%;align-items: center;"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let post of list_product">
+    <td>{{ post.id }}</td>
+    <td>{{ post.title }}</td>
+    <td><a href="http://www.odin.com/form.pdf" download="Form">Download Form</a></td>
+    <td><button pButton pRipple type="button" class="tblbtn" pSaveEditableRow icon="pi pi-check" (click)="DownloadMsg()">click button</button></td>
+  </tr>
+  </tbody>
+</table>   -->
+
+
+<p-table [value]="cars" class="row-border hover">
+  <ng-template pTemplate="header">
+      <tr>
+          <th *ngFor="let col of cols">
+              {{col.header}}
+          </th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+      <tr>
+          <td *ngFor="let col of cols">
+              {{car[col.field]}}
+          </td>
+      </tr>
+  </ng-template>
+</p-table>  
+
+
+
+
+
+
