@@ -20,7 +20,7 @@ export class EnquiryComponent {
 
   ngOnInit(): void {
 
-    this.http.get('http://20.81.111.0/api')
+    this.http.get('https://contactapim.azure-api.net/apim/api?subscription-key=cbaf55b380314897b437b8957171ee68')
       .subscribe(posts => {
         console.log(posts)
         console.log("posts are"+posts);
